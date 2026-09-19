@@ -2,7 +2,7 @@ import LinkCard from "@/components/LinkCard";
 import Profile from "@/components/Profile";
 
 const links = [
-  { label: "GitHub", href: "https://github.com/wsgo000", icon: "🐙" },
+  { label: "GitHub", href: "https://github.com/wsgo000-debug", icon: "🐙" },
   {
     label: "Instagram",
     href: "https://www.instagram.com/lwon_sangl?stkn=MXRscDdhbjFnNHBnOQ==",
@@ -18,7 +18,7 @@ export default function Home() {
         <Profile
           name="고원상"
           bio="세계최강의 남자가 될 남자"
-          avatarUrl="https://placehold.co/192x192/orange/white"
+          avatarUrl="/avatar-lego.svg"
         />
         <div className="flex w-full flex-col gap-3">
           {links.map((link) => (
