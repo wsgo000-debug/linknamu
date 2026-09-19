@@ -8,6 +8,7 @@ export type LinkItem = {
   label: string;
   href: string;
   icon: ReactNode;
+  iconBg: string;
 };
 
 type LinkListProps = {
@@ -54,6 +55,7 @@ export default function LinkList({ links }: LinkListProps) {
           href={link.href}
           label={link.label}
           icon={link.icon}
+          iconBg={link.iconBg}
           clickCount={counts[link.id] ?? 0}
           onClick={() => handleClick(link.id)}
         />
