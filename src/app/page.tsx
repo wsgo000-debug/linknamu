@@ -1,14 +1,15 @@
-import LinkCard from "@/components/LinkCard";
+import LinkList from "@/components/LinkList";
 import Profile from "@/components/Profile";
 
 const links = [
-  { label: "GitHub", href: "https://github.com/wsgo000-debug", icon: "🐙" },
+  { id: "github", label: "GitHub", href: "https://github.com/wsgo000-debug", icon: "🐙" },
   {
+    id: "instagram",
     label: "Instagram",
     href: "https://www.instagram.com/lwon_sangl?stkn=MXRscDdhbjFnNHBnOQ==",
     icon: "📸",
   },
-  { label: "Email", href: "mailto:wsgo000@gmail.com", icon: "📧" },
+  { id: "email", label: "Email", href: "mailto:wsgo000@gmail.com", icon: "📧" },
 ];
 
 export default function Home() {
@@ -20,11 +21,7 @@ export default function Home() {
           bio="세계최강의 남자가 될 남자"
           avatarUrl="/avatar-lego.svg"
         />
-        <div className="flex w-full flex-col gap-3">
-          {links.map((link) => (
-            <LinkCard key={link.label} href={link.href} label={link.label} icon={link.icon} />
-          ))}
-        </div>
+        <LinkList links={links} />
       </main>
     </div>
   );
